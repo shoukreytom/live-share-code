@@ -1,15 +1,15 @@
 from django.test import TestCase
-from django.contrib.auth.models import User
 from django.conf import settings
 from django.core.files.uploadedfile import SimpleUploadedFile
 
 from .models import File, Shared
+from accounts.models import Account
 
 
 class TestCases(TestCase):
 
     def setUp(self):
-        self.user = User.objects.create_user(username="testuser")
+        self.user = Account(email="testuser@admin.com")
         self.user.set_password("test123")
         self.user.save()
         for i in range(4):
