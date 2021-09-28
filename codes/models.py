@@ -13,6 +13,9 @@ class File(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     collaborators = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True, related_name='collaborators')
 
+    def __str__(self):
+        return self.name
+
 
 class Shared(models.Model):
     file = models.ForeignKey('File', on_delete=models.CASCADE)

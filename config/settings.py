@@ -18,6 +18,8 @@ INSTALLED_APPS = [
     # local
     'codes',
     'accounts',
+    #3rd parties
+    'rest_framework',
 ]
 
 AUTH_USER_MODEL = 'accounts.Account'
