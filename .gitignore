@@ -146,3 +146,5 @@ staticfiles/
 
 # test files
 testfile.txt
+
+migrations/
