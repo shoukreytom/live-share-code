@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'accounts',
     #3rd parties
     'rest_framework',
+    'corsheaders',
 ]
 
 AUTH_USER_MODEL = 'accounts.Account'
@@ -31,6 +32,7 @@ AUTH_USER_MODEL = 'accounts.Account'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -97,3 +99,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'https://livesharecode.netlify.app',
+    'http://livesharecode.netlify.app',
+]
