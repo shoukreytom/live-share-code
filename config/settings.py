@@ -6,7 +6,10 @@ SECRET_KEY = 'django-insecure-cj=q!m761ci4yjr3l2s#f0p*_n@&6m_kqmh%+kuq$vp-royb+i
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'livesharecode.herokuapp.com',
+    '127.0.0.1:8000'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
